@@ -15,6 +15,7 @@ import firebaseInitialization from "../../Firebase/Firebase.init";
 firebaseInitialization();
 const useFirebase = () => {
 	const [user, setUser] = useState({});
+	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState("");
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -65,7 +66,8 @@ const useFirebase = () => {
 				setUser(result.user);
 				history.push(redirectURL);
 			})
-			.catch((err) => setError(err.message));
+			.catch((err) => setError(err.message))
+			.finally(setIsLoading(false));
 	};
 	const signUpUsingGoogle = () => {
 		const googleProvider = new GoogleAuthProvider();
@@ -75,7 +77,8 @@ const useFirebase = () => {
 				setUser(result.user);
 				history.push(redirectURL);
 			})
-			.catch((err) => setError(err.message));
+			.catch((err) => setError(err.message))
+			.finally(setIsLoading(false));
 	};
 	const logOut = () => {
 		signOut(auth)
@@ -83,17 +86,20 @@ const useFirebase = () => {
 				setUser({});
 				setError("");
 			})
-			.catch((err) => setError(err.message));
+			.catch((err) => setError(err.message))
+			.finally(setIsLoading(false));
 	};
 	useEffect(() => {
 		onAuthStateChanged(auth, (user) => {
 			if (user) setUser(user);
+			setIsLoading(false);
 		});
 	}, []);
 	return {
 		user,
 		error,
 		logOut,
+		isLoading,
 		settingUserName,
 		settingUserEmail,
 		signUpUsingGoogle,
