@@ -9,10 +9,10 @@ function Home() {
 	const services = datum.filter((data) => data.category === "service");
 	return (
 		<div>
-			<Carousal />
+			<Carousal />f
 			<Container>
-				<Row className="mt-md-5 mt-sm-4 mt-2 g-4">
-					<div className="p-2">
+				<Row className=" mt-1 g-4">
+					<div className="px-2">
 						<h3 className="text-center rounded bg-dark text-white py-3 ">
 							Our Prominent Health Services
 						</h3>

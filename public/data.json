@@ -268,5 +268,32 @@
 			"They are fully friendly minded"
 		],
 		"desc": "All of our trainers are really highly qualified, certified and friendly minded. To give you the best help and support they are fully committed"
+	},
+	{
+		"id": 2009019,
+		"name": "William Grabble",
+		"title": "Manager",
+		"img": "https://images.pexels.com/photos/716411/pexels-photo-716411.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+		"email": "williamgrabble@gmail.com",
+		"phone": "+449843538",
+		"category": "Contact"
+	},
+	{
+		"id": 2009020,
+		"name": "Braid Tye",
+		"title": "Main Instructor",
+		"img": "https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+		"email": "braidtye@gmail.com",
+		"phone": "+444354535",
+		"category": "Contact"
+	},
+	{
+		"id": 2009021,
+		"name": "Mary Jit",
+		"title": "Main Supporter",
+		"img": "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+		"email": "marryjit@gmail.com",
+		"phone": "+447323435",
+		"category": "Contact"
 	}
 ]

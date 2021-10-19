@@ -8,8 +8,8 @@ function About() {
 	const aboutUs = datum.filter((data) => data.category === "About");
 	return (
 		<Container>
-			<Row className="g-4 mt-3">
-				<div className="p-2">
+			<Row className="g-4 mt-1">
+				<div className="px-2">
 					<h3 className="py-3 bg-dark rounded text-center text-white">
 						All About Us
 					</h3>

@@ -8,7 +8,7 @@ function PrivetRoute({ children, ...rest }) {
 	if (isLoading) {
 		return (
 			<div
-				style={{ height: "70vh" }}
+				style={{ height: "60vh" }}
 				className="mt-5 d-flex align-items-center justify-content-center"
 			>
 				<h4 className="me-2">Loading...</h4>

@@ -5,11 +5,18 @@ import useAuth from "../../Hooks/useFirebase/useAuth";
 import GoogleIcon from "../../../Icon/google.svg";
 import FacebookIcon from "../../../Icon/facebook.svg";
 import GithubIcon from "../../../Icon/github.svg";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+	offset: 0,
+	delay: 200,
+	duration: 700,
+});
 function LogIn() {
 	const {
 		error,
 		signUpUsingGoogle,
+		signUpUsingGitHub,
 		signInUsingEmailAndPassword,
 		settingUserEmail,
 		settingUserPassword,
@@ -19,9 +26,10 @@ function LogIn() {
 	};
 	return (
 		<Container>
-			<Row className=" mt-5 form-container align-items-center justify-content-center">
+			<Row className=" mt-4 form-container align-items-center justify-content-center">
 				<Col md={5}>
 					<Form
+						data-aos="fade-down"
 						onSubmit={(e) => signInUsingEmailAndPassword(e)}
 						style={shadow}
 						className="p-3"
@@ -71,6 +79,7 @@ function LogIn() {
 								alt="google icon"
 							/>
 							<img
+								onClick={signUpUsingGitHub}
 								style={{ width: "70px", cursor: "pointer" }}
 								src={GithubIcon}
 								alt="google icon"

@@ -9,8 +9,8 @@ function Training() {
 	return (
 		<div>
 			<Container>
-				<Row className="g-4 align-items-center mt-3">
-					<div className="p-2">
+				<Row className="g-4 align-items-center mt-1">
+					<div className="px-2">
 						<h3 className="text-center rounded bg-dark text-white py-3 ">
 							Our Popular Health Care
 						</h3>

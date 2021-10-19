@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import SingleService from "./components/Pages/Home/SingleService";
 import PrivetRoute from "./components/Hooks/PrivetRoute/PrivetRoute";
+import Contact from "./components/Pages/Contact/Contact";
 
 function App() {
 	return (
@@ -38,6 +39,9 @@ function App() {
 							<PrivetRoute path="/about">
 								<About />
 							</PrivetRoute>
+							<Route path="/contact">
+								<Contact />
+							</Route>
 							<Route path="/login">
 								<LogIn />
 							</Route>

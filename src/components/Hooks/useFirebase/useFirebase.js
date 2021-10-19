@@ -3,6 +3,7 @@ import {
 	getAuth,
 	updateProfile,
 	signInWithPopup,
+	GithubAuthProvider,
 	GoogleAuthProvider,
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
@@ -80,6 +81,17 @@ const useFirebase = () => {
 			.catch((err) => setError(err.message))
 			.finally(setIsLoading(false));
 	};
+	const signUpUsingGitHub = () => {
+		const gitHubProvider = new GithubAuthProvider();
+		signInWithPopup(auth, gitHubProvider)
+			.then((result) => {
+				setError("");
+				setUser(result.user);
+				history.push(redirectURL);
+			})
+			.catch((err) => setError(err.message))
+			.finally(setIsLoading(false));
+	};
 	const logOut = () => {
 		signOut(auth)
 			.then(() => {
@@ -103,6 +115,7 @@ const useFirebase = () => {
 		settingUserName,
 		settingUserEmail,
 		signUpUsingGoogle,
+		signUpUsingGitHub,
 		settingUserPassword,
 		settingConfirmPassword,
 		signUpWithEmailAndPassword,

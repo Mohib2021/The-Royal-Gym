@@ -1,6 +1,12 @@
 import React from "react";
 import { Carousel, Col, ListGroup } from "react-bootstrap";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+	offset: 150,
+	delay: 200,
+	duration: 700,
+});
 function ShowAbout({ about }) {
 	const { img, title, category, desc, atAGlance } = about;
 	const [first, second, third] = atAGlance;
@@ -10,7 +16,7 @@ function ShowAbout({ about }) {
 	};
 	return (
 		<Col md={4} sm={6}>
-			<div style={shadow} className="p-2">
+			<div data-aos="fade-up" style={shadow} className="p-2">
 				<div>
 					<Carousel>
 						<Carousel.Item>

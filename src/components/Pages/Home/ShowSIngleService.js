@@ -6,10 +6,10 @@ function ShowSIngleService({ selected }) {
 	const [first, second, third, fourth] = instruction;
 	return (
 		<Container>
-			<Row className="g-4 mt-4">
+			<Row className="g-1 mt-4">
 				<Col md={6} sm={12}>
 					<div>
-						<img className="img-fluid" src={img} alt="" />
+						<img className="img-fluid" src={img} alt="Service's photo" />
 					</div>
 				</Col>
 				<Col md={6} sm={12}>

@@ -1,6 +1,13 @@
 import React from "react";
 import { Col, ListGroup } from "react-bootstrap";
 import { useHistory } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+	offset: 150,
+	delay: 200,
+	duration: 700,
+});
 function Service({ service }) {
 	const { img, name, instruction, fewWord } = service;
 	const [first, second, third] = instruction;
@@ -13,7 +20,11 @@ function Service({ service }) {
 	};
 	return (
 		<Col md={4} sm={6}>
-			<div style={shadow} className=" p-2 rounded text-center">
+			<div
+				data-aos="fade-up"
+				style={shadow}
+				className=" p-2 rounded text-center"
+			>
 				<img className="img-fluid rounded" src={img} alt="service image" />
 				<h4 className="mt-3">{name}</h4>
 				<b>Instruction:-</b>

@@ -1,6 +1,12 @@
 import React from "react";
-import { Col, ListGroup } from "react-bootstrap";
-
+import { Col } from "react-bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+	offset: 150,
+	delay: 200,
+	duration: 900,
+});
 function ShowTraining({ training }) {
 	const { name, trainingCategory, img, fewWord, detailDesc, keyFeature } =
 		training;
@@ -8,12 +14,12 @@ function ShowTraining({ training }) {
 	return (
 		<>
 			<Col md={6} sm={12}>
-				<div>
+				<div data-aos="fade-right">
 					<img className="img-fluid" src={img} alt="Training image" />
 				</div>
 			</Col>
 			<Col md={6} sm={12}>
-				<div>
+				<div data-aos="fade-left">
 					<h4>{trainingCategory}</h4>
 					<h6 className="ms-5">
 						<span className="blockquote-footer">

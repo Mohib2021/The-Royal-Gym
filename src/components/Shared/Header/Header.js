@@ -11,7 +11,7 @@ function Header() {
 				<Container>
 					<Navbar.Brand href="#home">
 						<div className="d-flex align-items-center">
-							<img src="https://i.ibb.co/KKvLLKr/logo2.png" />
+							<img src="https://i.ibb.co/KKvLLKr/logo2.png" alt="logo" />
 
 							<h4 className="ms-2">The Royal Gym</h4>
 						</div>
@@ -27,6 +27,9 @@ function Header() {
 							</Nav.Link>
 							<Nav.Link as={Link} to="/about">
 								About
+							</Nav.Link>
+							<Nav.Link as={Link} to="/contact">
+								Contact
 							</Nav.Link>
 							{!user.displayName ? (
 								<Nav.Link as={Link} to="/login">
