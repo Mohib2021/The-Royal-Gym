@@ -17,6 +17,7 @@ function PrivetRoute({ children, ...rest }) {
 		);
 	}
 	return (
+		// implementing privet route and redirect
 		<Route
 			{...rest}
 			render={({ location }) =>

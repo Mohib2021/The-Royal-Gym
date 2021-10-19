@@ -1,7 +1,9 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+// importing font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+// setting animation on scroll (AOS)
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
@@ -10,6 +12,7 @@ AOS.init({
 	duration: 1000,
 });
 function ShowContact({ contact }) {
+	// destructuring contact data
 	const { name, img, title, email, phone } = contact;
 	const shadow = {
 		boxShadow: "0px 0px 15px gray",

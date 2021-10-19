@@ -4,7 +4,9 @@ import useData from "../../Hooks/useData/useData";
 import ShowContact from "./ShowContact";
 
 function Contact() {
+	// getting all data
 	const datum = useData();
+	// extracting contact data
 	const contacts = datum.filter((data) => data.category === "Contact");
 	return (
 		<Container>

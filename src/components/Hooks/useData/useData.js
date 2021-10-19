@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const useData = () => {
 	const [allData, setAllData] = useState([]);
+	// loading data
 	useEffect(() => {
 		fetch("/data.json")
 			.then((res) => res.json())

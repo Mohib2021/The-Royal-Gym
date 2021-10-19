@@ -1,3 +1,4 @@
+// importing everything from firebase
 import {
 	signOut,
 	getAuth,
@@ -5,14 +6,15 @@ import {
 	signInWithPopup,
 	GithubAuthProvider,
 	GoogleAuthProvider,
+	FacebookAuthProvider,
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
 	createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router";
-
 import firebaseInitialization from "../../Firebase/Firebase.init";
+// firebase initialization by calling
 firebaseInitialization();
 const useFirebase = () => {
 	const [user, setUser] = useState({});
@@ -92,6 +94,17 @@ const useFirebase = () => {
 			.catch((err) => setError(err.message))
 			.finally(setIsLoading(false));
 	};
+	const signUpUsingFacebook = () => {
+		const facebookProvider = new FacebookAuthProvider();
+		signInWithPopup(auth, facebookProvider)
+			.then((result) => {
+				setError("");
+				setUser(result.user);
+				history.push(redirectURL);
+			})
+			.catch((err) => setError(err))
+			.finally(setIsLoading(false));
+	};
 	const logOut = () => {
 		signOut(auth)
 			.then(() => {
@@ -107,6 +120,7 @@ const useFirebase = () => {
 			setIsLoading(false);
 		});
 	}, []);
+	// returning function and variable
 	return {
 		user,
 		error,
@@ -116,6 +130,7 @@ const useFirebase = () => {
 		settingUserEmail,
 		signUpUsingGoogle,
 		signUpUsingGitHub,
+		signUpUsingFacebook,
 		settingUserPassword,
 		settingConfirmPassword,
 		signUpWithEmailAndPassword,

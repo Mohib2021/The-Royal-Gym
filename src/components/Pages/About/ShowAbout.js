@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel, Col, ListGroup } from "react-bootstrap";
+// setting animation on scroll (AOS)
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
@@ -8,6 +9,7 @@ AOS.init({
 	duration: 1000,
 });
 function ShowAbout({ about }) {
+	// destructuring about data
 	const { img, title, category, desc, atAGlance } = about;
 	const [first, second, third] = atAGlance;
 	const [one, two, three] = img;

@@ -2,12 +2,14 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// setting AOS
 AOS.init({
 	offset: 150,
 	delay: 0.5,
 	duration: 1000,
 });
 function ShowTraining({ training }) {
+	// destructuring training data
 	const { name, trainingCategory, img, fewWord, detailDesc, keyFeature } =
 		training;
 	const [first, second, third, fourth] = keyFeature;

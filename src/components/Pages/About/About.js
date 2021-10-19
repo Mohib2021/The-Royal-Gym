@@ -4,7 +4,9 @@ import useData from "../../Hooks/useData/useData";
 import ShowAbout from "./ShowAbout";
 
 function About() {
+	// getting all data
 	const datum = useData();
+	// getting just about data
 	const aboutUs = datum.filter((data) => data.category === "About");
 	return (
 		<Container>

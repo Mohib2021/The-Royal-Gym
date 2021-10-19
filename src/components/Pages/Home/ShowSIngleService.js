@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 function ShowSIngleService({ selected }) {
+	// destructuring data
 	const { name, detailDesc, fewWord, img, instruction } = selected;
 	const [first, second, third, fourth] = instruction;
 	return (

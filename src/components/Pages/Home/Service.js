@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, ListGroup } from "react-bootstrap";
 import { useHistory } from "react-router";
+// setting AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
@@ -9,11 +10,13 @@ AOS.init({
 	duration: 1000,
 });
 function Service({ service }) {
+	// destructuring service data
 	const { img, name, instruction, fewWord } = service;
 	const [first, second, third] = instruction;
 	const shadow = {
 		boxShadow: "0px 0px 15px gray",
 	};
+	// using history
 	const history = useHistory();
 	const handleSeeMore = () => {
 		history.push(`/service/${service.id}`);

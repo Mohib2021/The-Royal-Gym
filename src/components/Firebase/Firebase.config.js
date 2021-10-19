@@ -1,3 +1,4 @@
+// firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyC_AKL9zVasbUCFYmO_7ApdsJHzRbHSuTQ",
 	authDomain: "mastering-gym.firebaseapp.com",

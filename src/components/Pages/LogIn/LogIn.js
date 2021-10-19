@@ -5,6 +5,7 @@ import useAuth from "../../Hooks/useFirebase/useAuth";
 import GoogleIcon from "../../../Icon/google.svg";
 import FacebookIcon from "../../../Icon/facebook.svg";
 import GithubIcon from "../../../Icon/github.svg";
+// setting AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
@@ -13,10 +14,12 @@ AOS.init({
 	duration: 700,
 });
 function LogIn() {
+	// getting all function from useFirebase by calling useAuth hook
 	const {
 		error,
 		signUpUsingGoogle,
 		signUpUsingGitHub,
+		signUpUsingFacebook,
 		signInUsingEmailAndPassword,
 		settingUserEmail,
 		settingUserPassword,
@@ -73,6 +76,7 @@ function LogIn() {
 								alt="google icon"
 							/>
 							<img
+								onClick={signUpUsingFacebook}
 								style={{ width: "70px", cursor: "pointer" }}
 								className="me-3"
 								src={FacebookIcon}

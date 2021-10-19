@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./Carousal.css";
 function Carousal() {
+	// holding img in variable
 	const item1 =
 		"https://images.pexels.com/photos/116079/pexels-photo-116079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 	const item2 =

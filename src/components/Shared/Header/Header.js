@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useFirebase/useAuth";
 import "./Header.css";
 function Header() {
+	// getting user and logOut form  useFirebase by calling useAuth hook
 	const { user, logOut } = useAuth();
 	return (
 		<div className="sticky-top">

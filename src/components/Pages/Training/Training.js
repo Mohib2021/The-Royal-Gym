@@ -4,7 +4,9 @@ import useData from "../../Hooks/useData/useData";
 import ShowTraining from "./ShowTraining";
 
 function Training() {
+	// getting all data
 	const datum = useData();
+	// extracting just training data
 	const training = datum.filter((data) => data.category === "Training");
 	return (
 		<div>
