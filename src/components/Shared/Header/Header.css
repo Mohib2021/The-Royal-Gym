@@ -1,0 +1,8 @@
+.navigation > a {
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-left: 1.2rem;
+}
+.sticky-top {
+	background-color: rgb(227, 227, 228);
+}

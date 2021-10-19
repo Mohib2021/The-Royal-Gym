@@ -1,0 +1,39 @@
+import React from "react";
+import { Col, ListGroup } from "react-bootstrap";
+
+function ShowTraining({ training }) {
+	const { name, trainingCategory, img, fewWord, detailDesc, keyFeature } =
+		training;
+	const [first, second, third, fourth] = keyFeature;
+	return (
+		<>
+			<Col md={6} sm={12}>
+				<div>
+					<img className="img-fluid" src={img} alt="Training image" />
+				</div>
+			</Col>
+			<Col md={6} sm={12}>
+				<div>
+					<h4>{trainingCategory}</h4>
+					<h6 className="ms-5">
+						<span className="blockquote-footer">
+							<cite title={name}>{name}</cite>
+						</span>
+					</h6>
+					<ul>
+						<li>{first}</li>
+						<li>{second}</li>
+						<li>{third}</li>
+						<li>{fourth}</li>
+					</ul>
+					<div className=" text-muted">
+						<p>{fewWord}</p>
+						<p>{detailDesc}</p>
+					</div>
+				</div>
+			</Col>
+		</>
+	);
+}
+
+export default ShowTraining;
