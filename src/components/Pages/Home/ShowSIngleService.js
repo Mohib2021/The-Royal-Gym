@@ -1,13 +1,18 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useHistory } from "react-router";
 
 function ShowSIngleService({ selected }) {
 	// destructuring data
 	const { name, detailDesc, fewWord, img, instruction } = selected;
 	const [first, second, third, fourth] = instruction;
+	const history = useHistory();
+	const handleGoBack = () => {
+		history.push("/home");
+	};
 	return (
 		<Container>
-			<Row className="g-1 mt-4">
+			<Row className="gx-4 gy-4 gy-md-0 align-items-center mt-4">
 				<Col md={6} sm={12}>
 					<div>
 						<img className="img-fluid" src={img} alt="Service's photo" />
@@ -26,6 +31,9 @@ function ShowSIngleService({ selected }) {
 						<div className=" text-muted">
 							<p>{fewWord}</p>
 							<p>{detailDesc}</p>
+							<button onClick={handleGoBack} className="btn btn-dark">
+								Go Back
+							</button>
 						</div>
 					</div>
 				</Col>

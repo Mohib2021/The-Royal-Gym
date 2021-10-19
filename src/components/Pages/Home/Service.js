@@ -4,12 +4,14 @@ import { useHistory } from "react-router";
 // setting AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
+import useAuth from "../../Hooks/useFirebase/useAuth";
 AOS.init({
 	offset: 130,
 	delay: 0.5,
 	duration: 1000,
 });
 function Service({ service }) {
+	const { setError } = useAuth();
 	// destructuring service data
 	const { img, name, instruction, fewWord } = service;
 	const [first, second, third] = instruction;
@@ -19,6 +21,7 @@ function Service({ service }) {
 	// using history
 	const history = useHistory();
 	const handleSeeMore = () => {
+		setError("");
 		history.push(`/service/${service.id}`);
 	};
 	return (
