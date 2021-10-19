@@ -4,9 +4,9 @@ import { useHistory } from "react-router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-	offset: 150,
-	delay: 200,
-	duration: 700,
+	offset: 130,
+	delay: 0.5,
+	duration: 1000,
 });
 function Service({ service }) {
 	const { img, name, instruction, fewWord } = service;

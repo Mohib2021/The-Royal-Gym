@@ -5,8 +5,8 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-	offset: 0,
-	delay: 200,
+	offset: 120,
+	delay: 0.5,
 	duration: 1000,
 });
 function ShowContact({ contact }) {

@@ -4,8 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
 	offset: 150,
-	delay: 200,
-	duration: 900,
+	delay: 0.5,
+	duration: 1000,
 });
 function ShowTraining({ training }) {
 	const { name, trainingCategory, img, fewWord, detailDesc, keyFeature } =

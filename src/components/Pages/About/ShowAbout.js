@@ -3,9 +3,9 @@ import { Carousel, Col, ListGroup } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-	offset: 150,
-	delay: 200,
-	duration: 700,
+	offset: 250,
+	delay: 0.5,
+	duration: 1000,
 });
 function ShowAbout({ about }) {
 	const { img, title, category, desc, atAGlance } = about;
