@@ -19,7 +19,7 @@ function Header() {
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
-						<Nav className="ms-auto navigation">
+						<Nav className="ms-auto text-center text-md-start navigation">
 							<Nav.Link as={Link} className="active" to="/home">
 								Home
 							</Nav.Link>
