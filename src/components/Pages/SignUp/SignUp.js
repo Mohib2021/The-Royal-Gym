@@ -19,7 +19,6 @@ function LogOut() {
 		error,
 		signUpUsingGoogle,
 		signUpUsingGitHub,
-		signUpUsingFacebook,
 		settingUserName,
 		settingUserEmail,
 		settingUserPassword,
@@ -96,7 +95,6 @@ function LogOut() {
 								alt="google icon"
 							/>
 							<img
-								onClick={signUpUsingFacebook}
 								style={{ width: "70px", cursor: "pointer" }}
 								className="me-3"
 								src={FacebookIcon}

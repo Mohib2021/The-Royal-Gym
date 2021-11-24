@@ -19,7 +19,6 @@ function LogIn() {
 		error,
 		signUpUsingGoogle,
 		signUpUsingGitHub,
-		signUpUsingFacebook,
 		signInUsingEmailAndPassword,
 		settingUserEmail,
 		settingUserPassword,
@@ -76,7 +75,6 @@ function LogIn() {
 								alt="google icon"
 							/>
 							<img
-								onClick={signUpUsingFacebook}
 								style={{ width: "70px", cursor: "pointer" }}
 								className="me-3"
 								src={FacebookIcon}

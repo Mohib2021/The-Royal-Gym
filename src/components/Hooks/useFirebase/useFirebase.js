@@ -94,17 +94,7 @@ const useFirebase = () => {
 			.catch((err) => setError(err.message))
 			.finally(setIsLoading(false));
 	};
-	const signUpUsingFacebook = () => {
-		const facebookProvider = new FacebookAuthProvider();
-		signInWithPopup(auth, facebookProvider)
-			.then((result) => {
-				setError("");
-				setUser(result.user);
-				history.push(redirectURL);
-			})
-			.catch((err) => setError(err))
-			.finally(setIsLoading(false));
-	};
+
 	const logOut = () => {
 		signOut(auth)
 			.then(() => {
@@ -131,7 +121,6 @@ const useFirebase = () => {
 		settingUserEmail,
 		signUpUsingGoogle,
 		signUpUsingGitHub,
-		signUpUsingFacebook,
 		settingUserPassword,
 		settingConfirmPassword,
 		signUpWithEmailAndPassword,
