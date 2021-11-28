@@ -8,8 +8,8 @@ We provide the best way to gym to make your health fit every time with the best 
 
 **The key features of our website :-**
 
-- Giving you The basic ideal of health care as gym.
-- Let you know the importance of gym to keep your health fit.
-- We have more than hundred instructor to help and support you.
+- Different type of health services.
+- Firebase authentication is applied.
+- Privet route implemented.
 - Not only physical but also ensuring mental health care.
 - Making your life more enjoyable.
