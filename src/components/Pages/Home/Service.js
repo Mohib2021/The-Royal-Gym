@@ -31,7 +31,7 @@ function Service({ service }) {
 				style={shadow}
 				className=" p-2 rounded text-center"
 			>
-				<img className="img-fluid rounded" src={img} alt="service image" />
+				<img className="img-fluid rounded" src={img} alt="service" />
 				<h4 className="mt-3">{name}</h4>
 				<b>Instruction:-</b>
 				<ListGroup variant="flush">

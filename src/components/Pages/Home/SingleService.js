@@ -11,6 +11,7 @@ function SingleService() {
 	const selectedService = datum.filter(
 		(data) => data.id === parseFloat(serviceId)
 	);
+
 	return (
 		<div>
 			{selectedService.map((selected) => (

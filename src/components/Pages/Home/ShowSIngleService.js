@@ -10,12 +10,13 @@ function ShowSIngleService({ selected }) {
 	const handleGoBack = () => {
 		history.push("/home");
 	};
+
 	return (
 		<Container>
 			<Row className="gx-4 gy-4 gy-md-0 align-items-center mt-4">
 				<Col md={6} sm={12}>
 					<div>
-						<img className="img-fluid" src={img} alt="Service's photo" />
+						<img className="img-fluid" src={img} alt="Service's" />
 					</div>
 				</Col>
 				<Col md={6} sm={12}>

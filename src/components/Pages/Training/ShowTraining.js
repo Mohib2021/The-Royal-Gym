@@ -17,7 +17,7 @@ function ShowTraining({ training }) {
 		<>
 			<Col md={6} sm={12}>
 				<div data-aos="fade-right">
-					<img className="img-fluid" src={img} alt="Training image" />
+					<img className="img-fluid" src={img} alt="Training" />
 				</div>
 			</Col>
 			<Col md={6} sm={12}>

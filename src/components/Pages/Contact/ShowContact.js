@@ -22,12 +22,7 @@ function ShowContact({ contact }) {
 		<Col>
 			<div data-aos="fade-left" style={shadow} className="p-2 rounded">
 				<div>
-					<img
-						className="rounded"
-						src={img}
-						className="img-fluid"
-						alt="contact img"
-					/>
+					<img className="rounded img-fluid" src={img} alt="contact" />
 				</div>
 				<div className="mt-2">
 					<h4>{name}</h4>

@@ -13,15 +13,30 @@ function Carousal() {
 		<div>
 			<Carousel fade>
 				<Carousel.Item>
-					<img className="d-block w-100" src={item1} alt="First slide" />
+					<img
+						style={{ height: "90vh", objectFit: "cover" }}
+						className="d-block w-100"
+						src={item1}
+						alt="First slide"
+					/>
 					<Carousel.Caption></Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img className="d-block w-100" src={item2} alt="Second slide" />
+					<img
+						style={{ height: "90vh", objectFit: "cover" }}
+						className="d-block w-100"
+						src={item2}
+						alt="Second slide"
+					/>
 					<Carousel.Caption></Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img className="d-block w-100" src={item3} alt="Third slide" />
+					<img
+						style={{ height: "90vh", objectFit: "cover" }}
+						className="d-block w-100"
+						src={item3}
+						alt="Third slide"
+					/>
 					<Carousel.Caption></Carousel.Caption>
 				</Carousel.Item>
 			</Carousel>

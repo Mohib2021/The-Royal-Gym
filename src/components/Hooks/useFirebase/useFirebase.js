@@ -6,7 +6,6 @@ import {
 	signInWithPopup,
 	GithubAuthProvider,
 	GoogleAuthProvider,
-	FacebookAuthProvider,
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
 	createUserWithEmailAndPassword,
@@ -109,7 +108,7 @@ const useFirebase = () => {
 			if (user) setUser(user);
 			setIsLoading(false);
 		});
-	}, []);
+	}, [auth]);
 	// returning function and variable
 	return {
 		user,
